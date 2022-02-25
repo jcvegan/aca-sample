@@ -8,7 +8,7 @@ namespace CustomAuth.Controllers
     [Route("[controller]")]
     public class GreetingsController : Controller
     {
-        [Authorize(AuthenticationSchemes = "custom")]
+        [Authorize()]
         [HttpGet(Name ="Greet superhero")]
         public IActionResult Get()
         {

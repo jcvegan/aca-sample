@@ -21,10 +21,6 @@ namespace CustomAuth.Auth.Handlers
 
         protected override Task<AuthenticateResult> HandleAuthenticateAsync()
         {
-            var endpoint = Context.GetEndpoint();
-
-            if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
-                return Task.FromResult(AuthenticateResult.NoResult());
 
             if (!Request.Headers.ContainsKey("Authorization"))
                 return Task.FromResult(AuthenticateResult.Fail("Missing header"));

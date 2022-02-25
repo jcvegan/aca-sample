@@ -29,7 +29,7 @@ namespace CustomAuth.Data
                 MemberOf = new string[]
                 {
                     "Avengers",
-                    "Fantasti Four",
+                    "Fantastic Four",
                     "Future Foundation",
                     "Lady Liberators"
                 },
